@@ -16,6 +16,8 @@ layout: default
         <span class="post-meta">{% if author %}Painstakingly written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.title }}</span></span> on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% endif %}</span>
 
         {{ post.content }}
+
+        <a class="link" href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Click to Comment</a>
       </li>
     {% endfor %}
   </ul>
@@ -23,3 +25,4 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+<script id="dsq-count-scr" src="//charlie6th.disqus.com/count.js" async></script>

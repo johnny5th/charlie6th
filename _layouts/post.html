@@ -14,4 +14,20 @@ layout: default
     {{ content }}
   </div>
 
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+    this.page.identifier = "{{ page.url }}";
+    this.page.title = "{{ page.title }}"
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//charlie6th.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
 </article>
