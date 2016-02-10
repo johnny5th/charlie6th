@@ -1,7 +1,7 @@
 ---
 published: true
 title: Documentation
-author: johnny
+author: Johnny
 ---
 
 ## Head First (Vertex) Into Fatherhood

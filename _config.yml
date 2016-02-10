@@ -7,13 +7,10 @@
 
 # Site settings
 title: Charlie6th.com
-email: johnny@johnny5th.com
 description: > # this means to ignore newlines until "baseurl:"
   A blog about the birthing and raising of our son, Charlie.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://charlie6th.com" # the base hostname & protocol for your site
-twitter_username: johnny5th
-github_username:  johnny5th
 
 # Build settings
 markdown: kramdown
@@ -25,6 +22,15 @@ defaults:
     values:
       layout: "post"
       permalink: /:year/:month/:day/:title
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+
+# Collections
+collections:
+  - authors
 
 # Prose Config
 prose:
@@ -45,8 +51,9 @@ prose:
         field:
           element: "select"
           label: "Author"
+          value: "johnny"
           options:
             - name: "Johnny"
-              value: "johnny"
+              value: "Johnny"
             - name: "Jackie"
-              value: "jackie"
+              value: "Jackie"

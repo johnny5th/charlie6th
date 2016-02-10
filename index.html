@@ -4,18 +4,18 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="post-heading">{{ site.description }}</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
+      {% assign author = site.authors | where:'title', post.author | first %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <span class="post-meta">{% if author %}Painstakingly written by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.title }}</span></span> on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% endif %}</span>
 
-        <p>{{ post.content }}</p>
+        {{ post.content }}
       </li>
     {% endfor %}
   </ul>
