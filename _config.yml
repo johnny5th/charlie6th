@@ -8,7 +8,7 @@
 # Site settings
 title: Charlie6th.com
 description: > # this means to ignore newlines until "baseurl:"
-  A blog about the birthing and raising of our son, Charlie.
+  A blog about the birth and raising of our son, Charlie.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://charlie6th.com" # the base hostname & protocol for your site
 
